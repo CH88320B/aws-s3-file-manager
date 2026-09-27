@@ -1,0 +1,35 @@
+{
+  "name": "aws-s3-file-manager",
+  "version": "1.0.0",
+  "description": "File management service on AWS S3: pre-signed uploads, thumbnails, ClamAV scanning and per-user quotas",
+  "main": "src/server.js",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "jest --coverage",
+    "lint": "eslint src tests"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.670.0",
+    "@aws-sdk/s3-presigned-post": "^3.670.0",
+    "@aws-sdk/s3-request-presigner": "^3.670.0",
+    "better-sqlite3": "^12.4.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "pino": "^9.4.0",
+    "sharp": "^0.33.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "aws-sdk-client-mock": "^4.0.2",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "license": "MIT"
+}
